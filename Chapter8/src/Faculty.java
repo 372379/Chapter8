@@ -1,10 +1,10 @@
 
-	public class Faculty extends Uemployee {
+	public class Faculty extends University {
 	private String deptName;
 
 	public Faculty(String fn, String Ln, Integer sal, String d) {
 	
-	super(fn,Ln,sal);
+	super();
 	deptName=d;
 	
 	}
