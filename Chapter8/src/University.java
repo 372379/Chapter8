@@ -39,16 +39,13 @@
 	
 	public static void main (String[] args) {
 		
-		University emp1,emp2, emp3;
+		University emp1;
 		emp1= assign();
-		emp2= assign();
-		emp3= assign();
 		
 		System.out.println("University Employees:");
 		
 		System.out.println(emp1);
-		System.out.println(emp2);
-		System.out.println(emp3);
+		
 	}
 	
 }
