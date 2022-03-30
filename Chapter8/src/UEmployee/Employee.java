@@ -1,3 +1,4 @@
+package UEmployee;
 
 public class Employee {
 private String firstName;
@@ -15,7 +16,7 @@ public Employee (String fn, String Ln, Integer sal) {
 }
 public String toString() {
 	
-	return(firstName+""+LastName+""+salary);
+	return(firstName + "" + LastName + "salary is " + salary);
 	
 	
 }

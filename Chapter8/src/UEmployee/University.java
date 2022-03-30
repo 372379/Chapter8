@@ -1,8 +1,10 @@
-	import java.util.Scanner;
+package UEmployee;
+
+import java.util.Scanner;
 
 	public class University {
 	
-	public static University assign() 
+  public static Employee createemployee()
 {
 	
 	Scanner	input = new Scanner(System.in);
@@ -40,10 +42,7 @@
 	public static void main (String[] args) {
 		
 		University emp1;
-		emp1= assign();
-		
-		System.out.println("University Employees:");
-		
+		emp1= createemployee();
 		System.out.println(emp1);
 		
 	}

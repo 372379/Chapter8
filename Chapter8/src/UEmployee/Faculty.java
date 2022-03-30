@@ -1,15 +1,18 @@
+package UEmployee;
 
-	public class Faculty extends University {
+
+	public class Faculty extends Employee 
+	{
 	private String deptName;
 
 	public Faculty(String fn, String Ln, Integer sal, String d) {
 	
-	super();
+	super(fn,Ln,sal);
 	deptName=d;
 	
 	}
 	public String toString() {
-		return(super.toString()+""+deptName);
+		return(super.toString() + "in the" + deptName + "department");
 		
 		
 	}

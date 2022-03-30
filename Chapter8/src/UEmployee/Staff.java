@@ -1,16 +1,18 @@
+package UEmployee;
 
-public class Staff extends University{
+
+public class Staff extends Employee{
 
 	private String jobTitle;
 	
 	public Staff (String fn, String Ln, Integer sal, String jb) {
 		
-		super();
+		super(fn,Ln,sal);
 		jobTitle = jb;
 		
 	}
 	public String toString() {
-		return(super.toString()+""+jobTitle);
+		return(super.toString() + "and works as a" + jobTitle);
 	}
 	
 }
