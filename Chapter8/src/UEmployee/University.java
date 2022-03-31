@@ -41,7 +41,7 @@ import java.util.Scanner;
 	
 	public static void main (String[] args) {
 		
-		University emp1;
+		Employee emp1;
 		emp1= createemployee();
 		System.out.println(emp1);
 		

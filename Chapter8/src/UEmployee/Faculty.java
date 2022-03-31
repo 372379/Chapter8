@@ -12,7 +12,7 @@ package UEmployee;
 	
 	}
 	public String toString() {
-		return(super.toString() + "in the" + deptName + "department");
+		return(super.toString() + " and works as faculty member in the " + deptName + " department. ");
 		
 		
 	}

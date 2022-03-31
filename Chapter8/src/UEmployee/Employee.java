@@ -16,7 +16,7 @@ public Employee (String fn, String Ln, Integer sal) {
 }
 public String toString() {
 	
-	return(firstName + "" + LastName + "salary is " + salary);
+	return(firstName + " " +  LastName  + " and his salary is " + salary);
 	
 	
 }
