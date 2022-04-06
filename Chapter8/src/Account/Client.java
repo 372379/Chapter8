@@ -5,7 +5,7 @@ public class Client {
  public static void main (String[]args) {
 	
 	PersonalAccount t1= new 
-	PersonalAccount("Jonathan","Stalin", 98);
+	PersonalAccount( " Joseph " ,"Stalin", 98);
 	 
 	System.out.print(t1.getBalance());
 	 
