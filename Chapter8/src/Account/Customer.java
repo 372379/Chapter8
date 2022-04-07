@@ -1,28 +1,28 @@
 package Account;
 
 	public class Customer {
-		private String fn;
-		private String ln;
+		private String Firstname, lastname, Street, City, State, Zip;
 		
-		
-		
-		public Customer(String f, String l )
-		{
+		public Customer (String fn, String ln, String Str. String City, String st, String Z) {
 			
-		fn= f;
-		ln=l;
+			Firstname= fn; 
+			lastname= ln;
+			Street= str;
+			City= C;
+			State= S;
+			Zip= Z;
+			
 			
 		}
-	
-		public String getName()
-		{
-		return(" fn " + " ln ");	
-		}
+		public String toString() {
+		String custString;
 		
-		public String toString() 
-		{
-			return (" Your name is " + fn + "" + ln );
+		custString= Firstname + " " + lastname + "/n " ;
+		custString= Street + " /n";
+		custString= Street + " /n" + ", " + State + "" + Zip + "/m";
+
+		return(custString);
+			
 		}
-		
 		
 	}

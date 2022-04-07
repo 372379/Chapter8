@@ -4,47 +4,50 @@ import java.text.NumberFormat;
 
 public class PersonalAccount extends Account
 	{
-
-	public double balance;
-	
-	public PersonalAccount(String f, String l, double b)
-	{
-	super(f,l);
-	balance= b;
-	}
-
-	public double getBalance() 
-{
-return(balance);	
-}
-
-	public void withdraw(double x) 
-{
-		if(balance>=x) 
- {
-			if(x>=100) 
-	 {
-		balance=balance-x; 
-		 
+	 private double MIN = 100;
+	 
+	 public PersonalAccount(double bal, double MIN) {
+		 super (90999,"DAD", "DADS");
+		 MIN = MIN;
 	 }
-	 else
-	 {
+	 
+	 public void withdrawal(double amt, double balance) {
 		 
-		 balance = balance-x-2;
-	 }
-   }	
-}
-
-	public void deposit(double added) {
-			balance=balance+ added;
-}
-
-	public String toString() 
-{
-		NumberFormat money = NumberFormat.getInstance();
-		return(" You have $ " + money.format(balance)+ " in your account. ");
-}
-	
-	
-	
+		 if(amt<= balance) {
+			 balance-=amt;
+			 if(balance<MIN) {
+				 balance = balance - 2;
+				 
+				 }
+		 }
+		 else
+		 {
+			System.out.println("Not enought money in your account ");
+			 
+			 
+		 } 
+	 }	
 	}
+public boolean equals (Object p) {
+	PersonalAccount testObj = (PersonalAccount)p;
+	
+	if (testObj.getBalance()==super.getBalance()) {
+		return(true);
+		}
+	else {
+		return(false);
+		
+	}
+	
+}
+
+
+public String toString() {
+	
+	String PersonalAccountString;
+	
+	PersonalAccountString = "The Balance is" + super.getBalance();
+	return(PersonalAccountString);
+	
+	
+}
