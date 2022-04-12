@@ -3,50 +3,47 @@ package Account;
 import java.text.NumberFormat;
 
 public class Account {
-
-	private double balance;
-	private Customer cust;
+	private double balance;//double variable balance 
+	protected Customer cust;
+		
 	
-	public Account(double bal, String fn, String ln, String Str. String City, String st, String zip) {
-		
-		balance=bal;
-		cust= newCustomer(fn,ln, Str,City,st,zip);
-		
+	
+	public Account(double bal, String fName, String lName, String str, String city, String st, String zip) {
+		balance = bal;
+		cust = new Customer(fName, lName, str, city, st, zip);
 	}
+	
+
 	
 	public double getBalance() {
-		return(balance);
-		
-		
+	 	return(balance);
+	}
+
+
+	
+	public void deposit(double amt) {
+	 	balance += amt;
+	}
+
+	
+	
+	public void withdrawal(double amt) {
+	 	if (amt <= balance) {
+	 		balance -= amt;
+	 	} else {
+	 		System.out.println("Not enough money in account.");
+	 	}
 	}
 	
-	public void deposity(double amt ) {
-		balance+=amt;
-		
-	}
-
-	public void withdraw (double amt) {
-		if (amt<=balance) {
-			balance-=amt;
-		}
-		else
-		{
-			
-			System.out.print(" Not enough money in account ");
-		}
-	}
-
+	
+	
 	public String toString() {
 		String accountString;
-		NumberFormat money= NumberFormat.getCurrencyInstance();
-		accountString =cust.toString();
-		accountString += "Current balance  is " + money.format(balance);
-		return (accountString);
-		
-	} 
-	
-	
-	
-}
+		NumberFormat money = NumberFormat.getCurrencyInstance();
 
+		accountString = cust.toString();
+		accountString += "Current balance is " + money.format(balance)+cust.toString();
+	 	return(accountString);
+	}
+}
 

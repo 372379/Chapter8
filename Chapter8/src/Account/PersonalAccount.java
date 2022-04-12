@@ -1,53 +1,50 @@
 package Account;
 
-import java.text.NumberFormat;
 
-public class PersonalAccount extends Account
-	{
-	 private double MIN = 100;
-	 
-	 public PersonalAccount(double bal, double MIN) {
-		 super (90999,"DAD", "DADS");
-		 MIN = MIN;
-	 }
-	 
-	 public void withdrawal(double amt, double balance) {
-		 
-		 if(amt<= balance) {
-			 balance-=amt;
-			 if(balance<MIN) {
-				 balance = balance - 2;
-				 
-				 }
-		 }
-		 else
-		 {
-			System.out.println("Not enought money in your account ");
-			 
-			 
-		 } 
-	 }	
-	}
-public boolean equals (Object p) {
-	PersonalAccount testObj = (PersonalAccount)p;
+public class PersonalAccount extends Account {
+
+
+	public PersonalAccount(double bal) {
+
+		super(bal, null, null, null, null, null, null);
 	
-	if (testObj.getBalance()==super.getBalance()) {
-		return(true);
+	}
+
+	public void withdrawal(double amt) {
+
+	     
+		if (amt <= super.getBalance() - 2 ) 
+		{			
+
+			super.withdrawal(amt);
+			
+			if (super.getBalance() < 100) {
+				super.withdrawal(2.00);
+				System.out.println("Not enough money in account.");
+			}
+
+		} else {
+
+			System.out.println("Not enough money in account.");
 		}
-	else {
-		return(false);
-		
 	}
-	
-}
 
+    
+	public boolean equals(PersonalAccount p) {
+		if (p.getBalance() == super.getBalance()) {
+		return (true);
+		} else {
+			
+			return (false);
+		}
 
-public String toString() {
-	
-	String PersonalAccountString;
-	
-	PersonalAccountString = "The Balance is" + super.getBalance();
-	return(PersonalAccountString);
-	
-	
+	}
+  
+	public String toString() {
+
+		String personacctString;
+		personacctString = "The balance is " + super.getBalance();
+		return (personacctString);
+	}
+
 }

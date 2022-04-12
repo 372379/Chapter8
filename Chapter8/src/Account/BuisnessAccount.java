@@ -1,29 +1,83 @@
 package Account;
 
-import java.text.NumberFormat;
 
 public class BuisnessAccount extends Account {
- 
-	private final int w=10;
-	
-	public BuisnessAccount(double bal, String fn, String ln, String Str. String City, String st, String zip, int f) {
-		
-		super (bal,fn,ln,str,City,st,zip);
-		constructor stub
+
+	private double MIN = 500;
+
+
+
+	public BuisnessAccount(double bal) {
+
+		super(bal, null, null, null, null, null, null);
+
+
+
 	}
-	
-	public void withrdraw (double y) {
+
+
+
+	public void withdrawal(double amt) {
+
 		
-		if (super.getBalance()>=y) {
-			super.deposit(super.getBalance()-y);
-				
-		}
-		else {
-			super.deposit(super.getBalance()-y-w);
+
+		double balance = getBalance();
+
+
+
+		if (amt <= balance) {
+
 			
+
+			super.withdrawal(amt);
+
+
+
+
+			if (getBalance() < MIN) {
+
+				super.withdrawal(10.00);
+
+			}
+
+		} else {
+
+			System.out.println("Not enough money in account.");
+
 		}
-		
-		
+
 	}
-	
+
+
+      
+	public boolean equals(BuisnessAccount p) {
+
+
+
+		if (p.getBalance() == super.getBalance()) {
+
+			return (true);
+
+		} else {
+
+			return (false);
+
+		}
+
+	}
+
+
+    
+	public String toString() {
+
+		String businessacctString;
+
+
+        
+		businessacctString = "The balance is " + super.getBalance();
+
+		return (businessacctString);
+
+	}
+
 }
