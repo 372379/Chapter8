@@ -23,4 +23,4 @@ public class Customer {
 		custString += city + ", " + state + "  " + zip + "\n";
 	 	return(custString);
 	}
-}
+}  

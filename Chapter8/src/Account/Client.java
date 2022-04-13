@@ -12,10 +12,9 @@ public class Client {
 		
 		System.out.println("Customer info");
 		 
-		Customer c1 = new Customer("Elon", "Gates", "2314 redstone way NE", "Calgary", "Canada", "T3Z 9V7");
+		Customer c1 = new Customer("Suraj ", " Dangwal ", "649 Coventry Dr NE", "Calgary", "Canada", "T3K 9X9");
 		
 		System.out.println(c1);
-		
 		
 		
 	
@@ -37,7 +36,7 @@ public class Client {
 			System.out.println("\n$ 2 should be charged as account balance is below $100: ");
 	        
 			
-			acct.withdrawal(150);
+			acct.withdrawal(10);
 	        
 			
 			
@@ -53,11 +52,10 @@ public class Client {
 		
 		
 				
-			BuisnessAccount acct3 = new BuisnessAccount(180000.00);
+			BuisnessAccount acct3 = new BuisnessAccount(10000);
 	
 			
-			System.out.println("Account balance: " + acct3.toString());
-	
+			System.out.println(" Account balance: " + acct3.toString());
 			
 	
 			System.out.println("\nWithdrawing U$SD 200 : ");
