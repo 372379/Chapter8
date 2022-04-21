@@ -1,5 +1,5 @@
 package FileandReplace;
 
-public class FileName {
+public class FileName{
 
 }
